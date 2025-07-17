@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func (c *Client) ListLocations9pageURL *string) (RespShallowLocations, error) {
+func (c *Client) ListLocations(pageURL *string) (RespShallowLocations, error) {
 	url := baseURL + "/location-area"
 	if pageURL != nil {
 		url = *pageURL
@@ -29,7 +29,7 @@ func (c *Client) ListLocations9pageURL *string) (RespShallowLocations, error) {
 	}
 
 	locationsResp := RespShallowLocations{}
-	err = json.unmarshal(dat, &locationsResp)
+	err = json.Unmarshal(dat, &locationsResp)
 	if err != nil {
 		return RespShallowLocations{}, err
 	}

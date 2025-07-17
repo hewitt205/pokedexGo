@@ -1,6 +1,6 @@
 package main
 
-improt (
+import (
 	"errors"
 	"fmt"
 )
@@ -30,10 +30,10 @@ func commandMapb(config *config) error {
 		return err
 	}
 
-	config.nextLocationsURL = locationResp.Next
+	config.nextLocationsURL = locationsResp.Next
 	config.prevLocationsURL = locationsResp.Previous
 
-	for _, loc := range locationResp.Results {
+	for _, loc := range locationsResp.Results {
 		fmt.Println(loc.Name)
 	}
 	return nil

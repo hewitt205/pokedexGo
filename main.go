@@ -3,12 +3,12 @@ package main
 import (
 	"time"
 
-	"github.com/hewitt205/Pokedex/internal/pokeapi"
+	"github.com/hewitt205/pokedexGo/internal/pokeapi"
 )
 
 
 func main() {
-	pokeClient := pokeapi.newClient(5 * time.Second)
+	pokeClient := pokeapi.NewClient(5 * time.Second)
 	config := &config{
 		pokeapiClient: pokeClient,
 	}

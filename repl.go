@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hewitt205/Pokedex/internal/pokeapi"
+	"github.com/hewitt205/pokedexGo/internal/pokeapi"
 )
 
 type config struct {
@@ -60,10 +60,10 @@ func getCommands() map[string]cliCommand {
 		"map": {
 			name: "map",
 			description: "Lists the names of world locations, 20 at a time",
-			callback: commandMap,
+			callback: commandMapf,
 		},
 		"mapb": {
-			name: "map back",
+			name: "mapb",
 			description: "Lists the names of the previous 20 world locations",
 			callback: commandMapb,
 		},
